@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byte-Builders | BUILD. CODE. EXPLORE.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">Byte<span>-Builders</span></a>
+      <nav class="nav-links">
+        <a href="#categories">Categories</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="#custom-projects">Custom Projects</a>
+        <a href="#about">About</a>
+        <a href="#instagram" class="btn-outline">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="badge">PRACTICAL TECH & CYBER LABS</div>
+      <h1>BUILD. CODE. <span>EXPLORE.</span></h1>
+      <p>Beginner-friendly electronics, ESP32 robotics, Python programming, and ethical cybersecurity tutorials—complete with diagrams, items lists, and copy-paste code.</p>
+      <div class="hero-buttons">
+        <a href="#tutorials" class="btn-primary">Explore 8 Tutorials</a>
+        <a href="#custom-projects" class="btn-secondary">DM for Custom Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Main Categories -->
+  <section id="categories" class="section container">
+    <h2 class="section-title">Core <span>Categories</span></h2>
+    <div class="category-grid">
+      <div class="cat-card" onclick="filterByCategory('Arduino')">
+        <div class="cat-icon">⚡</div>
+        <h3>Arduino & Electronics</h3>
+        <p>Sensors, breadboard circuits, TFT displays, and step-by-step wiring tables.</p>
+      </div>
+      <div class="cat-card" onclick="filterByCategory('Robotics')">
+        <div class="cat-icon">🤖</div>
+        <h3>Robotics & IoT</h3>
+        <p>ESP32 Wi-Fi web servers, smart automation, motors, and connected sensors.</p>
+      </div>
+      <div class="cat-card" onclick="filterByCategory('Python')">
+        <div class="cat-icon">🐍</div>
+        <h3>Python & Coding</h3>
+        <p>Python fundamentals, cybersecurity tools, calculators, and beginner scripts.</p>
+      </div>
+      <div class="cat-card" onclick="filterByCategory('Cybersecurity')">
+        <div class="cat-icon">🛡️</div>
+        <h3>Ethical Cybersecurity</h3>
+        <p>Linux basics, Rufus Live USB labs, VirtualBox, and defensive security.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutorial Library with Search & Filters -->
+  <section id="tutorials" class="section container">
+    <h2 class="section-title">Tutorial <span>Library</span></h2>
+    
+    <div class="controls-bar">
+      <input type="text" id="searchInput" placeholder="Search projects, sensors, or code (e.g., Radar, ESP32, Password, Rufus)...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="All">All (8)</button>
+        <button class="filter-btn" data-category="Arduino">Arduino</button>
+        <button class="filter-btn" data-category="Robotics">Robotics & IoT</button>
+        <button class="filter-btn" data-category="Python">Python</button>
+        <button class="filter-btn" data-category="Cybersecurity">Cybersecurity</button>
+      </div>
+    </div>
+
+    <!-- Tutorials Grid (Populated by script.js) -->
+    <div id="tutorialGrid" class="tutorial-grid"></div>
+  </section>
+
+  <!-- Custom Project Request Section -->
+  <section id="custom-projects" class="section container">
+    <h2 class="section-title">Need a <span>Custom Project?</span></h2>
+    <div class="custom-grid">
+      <div class="custom-card">
+        <span class="custom-step">01</span>
+        <h3>School Science & Tech Exhibitions</h3>
+        <p>Need a working Arduino or ESP32 prototype idea with a complete wiring table and tested code for your school exhibition?</p>
+      </div>
+      <div class="custom-card">
+        <span class="custom-step">02</span>
+        <h3>Custom Sensor & Code Modifications</h3>
+        <p>Want to combine two sensors (like an Ultrasonic Sensor + Buzzer + LCD) and need the exact circuit diagram and code?</p>
+      </div>
+      <div class="custom-card">
+        <span class="custom-step">03</span>
+        <h3>Python Automation & Mini Tools</h3>
+        <p>Looking for a beginner-friendly Python script, calculator, or mini cybersecurity tool explained line-by-line?</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 25px;">
+      <a href="#instagram" class="btn-primary">DM FOR CUSTOM PROJECTS ON INSTAGRAM</a>
+    </div>
+  </section>
+
+  <!-- About & Ethical Notice -->
+  <section id="about" class="section container">
+    <div class="about-box">
+      <h2>About <span>Byte-Builders</span></h2>
+      <p>Byte-Builders is an image-first educational project created to make hardware electronics, coding, and cybersecurity clear and practical for students and beginners. Every tutorial includes a visual diagram, a complete list of items used, verified wiring tables, and full copy-paste code.</p>
+      <div class="ethics-notice">
+        <strong>🛡️ Ethical Cybersecurity Rule:</strong> All Linux and cybersecurity tutorials are strictly for educational and defensive purposes. Only test commands on your own computer, VirtualBox labs, or authorized practice platforms.
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram CTA -->
+  <section id="instagram" class="section container">
+    <div class="insta-banner">
+      <h2>Follow Our Bite-Sized Carousels on <span>Instagram</span></h2>
+      <p>Check out quick circuit diagrams, code snippets, or <strong>DM FOR CUSTOM PROJECTS</strong>!</p>
+      <a href="https://instagram.com/byte_builders.official" target="_blank" id="instaLink" class="btn-primary">Follow @byte_builders.official on Instagram</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Byte-Builders</strong> — BUILD. CODE. EXPLORE. | Built with HTML, CSS & JS</p>
+    </div>
+  </footer>
+
+  <!-- Tutorial Modal Popup -->
+  <div id="tutorialModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
