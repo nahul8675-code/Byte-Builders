@@ -1,12 +1,12 @@
 :root {
-  --bg-dark: #0a0f1d;       /* Deep obsidian navy */
-  --bg-card: #131b2e;       /* Medium navy card surface */
-  --bg-code: #070b14;       /* Deep code block background */
-  --cyan: #e11d48;          /* Rose / dark pink accent */
-  --lime: #fda4af;          /* Soft rose secondary accent */
-  --text-main: #ffffff;     /* Crisp white text */
-  --text-muted: #94a3b8;    /* Slate gray for secondary text */
-  --border: #1e293b;        /* Subtle slate border */
+  --bg-dark: #0f1c3f;       /* Noticeable deep navy blue */
+  --bg-card: #182b5c;       /* Medium navy blue card background */
+  --bg-code: #0b1530;       /* Darker navy container for code */
+  --cyan: #db2777;          /* Vibrant dark pink / magenta */
+  --lime: #f472b6;          /* Soft rose pink accent */
+  --text-main: #ffffff;     /* Brisk white text */
+  --text-muted: #cbd5e1;    /* Clear slate white for secondary text */
+  --border: #284489;        /* Defined navy border */
 }
 
 * {
@@ -18,7 +18,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-dark);
-  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+  background-image: radial-gradient(#243d78 1px, transparent 1px);
   background-size: 24px 24px;
   color: var(--text-main);
   line-height: 1.6;
@@ -35,7 +35,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 15, 29, 0.94);
+  background: rgba(15, 28, 63, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   padding: 15px 0;
@@ -76,7 +76,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--cyan);
+  color: var(--lime);
 }
 
 /* Buttons */
@@ -95,32 +95,38 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: #be123c;
+  background: #be185d;
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--lime);
+  color: var(--text-main);
   border: 2px solid var(--lime);
   padding: 8px 18px;
   border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
+  transition: background 0.2s;
 }
 
 .btn-secondary:hover {
-  background: rgba(225, 29, 72, 0.1);
+  background: rgba(219, 39, 119, 0.18);
 }
 
 .btn-outline {
   border: 1px solid var(--cyan);
   padding: 6px 14px;
   border-radius: 5px;
-  color: var(--cyan) !important;
+  color: #ffffff !important;
+  background: rgba(219, 39, 119, 0.15);
 }
 
-/* Hero */
+.btn-outline:hover {
+  background: var(--cyan);
+}
+
+/* Hero Section */
 .hero {
   padding: 70px 0 50px;
   text-align: center;
@@ -128,12 +134,12 @@ body {
 
 .badge {
   display: inline-block;
-  background: rgba(225, 29, 72, 0.12);
+  background: rgba(219, 39, 119, 0.18);
   color: var(--lime);
-  border: 1px solid rgba(225, 29, 72, 0.4);
-  padding: 4px 12px;
+  border: 1px solid var(--cyan);
+  padding: 4px 14px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -162,7 +168,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Sections */
+/* Section Headings */
 .section {
   padding: 45px 20px;
 }
@@ -170,7 +176,7 @@ body {
 .section-title {
   font-size: 1.9rem;
   margin-bottom: 25px;
-  border-left: 4px solid var(--cyan);
+  border-left: 5px solid var(--cyan);
   padding-left: 12px;
 }
 
@@ -191,11 +197,12 @@ body {
   border-radius: 10px;
   padding: 22px;
   cursor: pointer;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
 }
 
 .cat-card:hover {
-  border-color: var(--cyan);
+  border-color: var(--lime);
+  background: #1c326b;
   transform: translateY(-4px);
 }
 
@@ -205,7 +212,7 @@ body {
 }
 
 .cat-card h3 {
-  color: var(--cyan);
+  color: var(--text-main);
   margin-bottom: 8px;
 }
 
@@ -214,7 +221,7 @@ body {
   font-size: 0.92rem;
 }
 
-/* Search & Filter Controls */
+/* Search and Filters */
 .controls-bar {
   display: flex;
   flex-direction: column;
@@ -251,12 +258,13 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.2s;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: rgba(225, 29, 72, 0.15);
-  color: var(--lime);
+  background: var(--cyan);
+  color: #ffffff;
   border-color: var(--cyan);
 }
 
@@ -279,12 +287,12 @@ body {
 }
 
 .tut-card:hover {
-  border-color: var(--cyan);
+  border-color: var(--lime);
   transform: translateY(-3px);
 }
 
 .tut-graphic {
-  background: #0d1424;
+  background: #122147;
   border-bottom: 1px solid var(--border);
   padding: 20px;
   text-align: center;
@@ -296,9 +304,9 @@ body {
 }
 
 .chip-illustration {
-  border: 1px solid var(--cyan);
-  background: rgba(225, 29, 72, 0.1);
-  color: var(--lime);
+  border: 1px solid var(--lime);
+  background: rgba(219, 39, 119, 0.2);
+  color: var(--text-main);
   font-family: monospace;
   font-weight: 700;
   padding: 10px 16px;
@@ -320,7 +328,7 @@ body {
 }
 
 .tut-tag {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--lime);
   text-transform: uppercase;
   font-weight: 700;
@@ -334,29 +342,29 @@ body {
 
 .difficulty-badge, .time-badge {
   font-size: 0.72rem;
-  padding: 2px 8px;
+  padding: 3px 8px;
   border-radius: 12px;
   font-weight: 700;
 }
 
 .difficulty-badge {
-  background: rgba(225, 29, 72, 0.15);
-  color: var(--lime);
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  background: rgba(219, 39, 119, 0.25);
+  color: #ffffff;
+  border: 1px solid var(--cyan);
 }
 
 .time-badge {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-main);
 }
 
 .tut-body h3 {
-  margin: 4px 0 12px;
-  font-size: 1.2rem;
+  margin: 6px 0 12px;
+  font-size: 1.25rem;
 }
 
 .items-preview {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(11, 21, 48, 0.6);
   padding: 10px 12px;
   border-radius: 6px;
   border-left: 3px solid var(--cyan);
@@ -365,7 +373,7 @@ body {
 }
 
 .items-preview strong {
-  color: var(--cyan);
+  color: var(--lime);
   display: block;
   margin-bottom: 4px;
 }
@@ -374,7 +382,7 @@ body {
   padding: 0 20px 20px;
 }
 
-/* Custom Projects Grid */
+/* Custom Project Cards */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -384,7 +392,7 @@ body {
 .custom-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-top: 3px solid var(--cyan);
+  border-top: 4px solid var(--cyan);
   border-radius: 10px;
   padding: 24px;
 }
@@ -408,7 +416,7 @@ body {
   font-size: 0.92rem;
 }
 
-/* About & Instagram */
+/* About & Instagram Modules */
 .about-box, .insta-banner {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -419,10 +427,11 @@ body {
 .ethics-notice {
   margin-top: 15px;
   padding: 12px 15px;
-  background: rgba(225, 29, 72, 0.08);
+  background: rgba(219, 39, 119, 0.12);
   border-left: 4px solid var(--cyan);
   border-radius: 4px;
   font-size: 0.95rem;
+  color: var(--text-main);
 }
 
 .insta-banner {
@@ -431,7 +440,7 @@ body {
 }
 
 .insta-banner h2 span {
-  color: var(--cyan);
+  color: var(--lime);
 }
 
 .insta-banner p {
@@ -439,14 +448,14 @@ body {
   color: var(--text-muted);
 }
 
-/* Modal */
+/* Modals */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(11, 21, 48, 0.88);
   display: none;
   align-items: center;
   justify-content: center;
@@ -460,7 +469,7 @@ body {
 
 .modal-content {
   background: var(--bg-card);
-  border: 1px solid var(--cyan);
+  border: 1px solid var(--border);
   border-radius: 12px;
   max-width: 780px;
   width: 100%;
@@ -474,7 +483,7 @@ body {
   position: sticky;
   top: 0;
   float: right;
-  background: var(--bg-dark);
+  background: var(--bg-code);
   color: var(--text-main);
   border: 1px solid var(--border);
   font-size: 1.5rem;
@@ -509,7 +518,7 @@ pre {
   padding: 16px;
   border-radius: 8px;
   overflow-x: auto;
-  color: #f1f5f9;
+  color: #ffffff;
   font-family: Consolas, monospace;
   font-size: 0.9rem;
 }
@@ -529,7 +538,7 @@ pre {
 }
 
 .copy-btn:hover {
-  background: #be123c;
+  background: #be185d;
 }
 
 .footer {
@@ -538,6 +547,7 @@ pre {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.9rem;
+  background: var(--bg-code);
 }
 
 /* Wiring Table */
@@ -564,7 +574,7 @@ pre {
 }
 
 .wiring-table th {
-  background: rgba(225, 29, 72, 0.12);
+  background: rgba(219, 39, 119, 0.2);
   color: var(--lime);
   font-weight: 700;
   text-transform: uppercase;
@@ -577,14 +587,14 @@ pre {
 }
 
 .wiring-table tr:hover td {
-  background: rgba(225, 29, 72, 0.05);
+  background: rgba(219, 39, 119, 0.08);
 }
 
 .pin-badge {
   display: inline-block;
-  background: rgba(225, 29, 72, 0.15);
+  background: rgba(219, 39, 119, 0.2);
   color: var(--lime);
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  border: 1px solid var(--cyan);
   padding: 2px 8px;
   border-radius: 4px;
   font-family: Consolas, monospace;
