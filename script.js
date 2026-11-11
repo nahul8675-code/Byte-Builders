@@ -245,7 +245,7 @@ function renderTutorials() {
         </div>
       </div>
       <div class="tut-footer">
-        <button class="btn-primary" style="width:100%;" onclick="openTutorial(${tut.id})">Open Detailed Guide</button>
+        <button class="btn-primary" onclick="openTutorial(${tut.id})">Open Detailed Guide</button>
       </div>
     `;
     grid.appendChild(card);
@@ -277,10 +277,10 @@ function openTutorial(id) {
         <span class="time-badge">⏱️ ${tut.time}</span>
       </div>
     </div>
-    <h2 style="margin:8px 0 16px; color:var(--cyan);">${tut.title}</h2>
+    <h2 style="margin:8px 0 16px; color:var(--btn-walnut);">${tut.title}</h2>
     
-    <div class="modal-section" style="background:#ECE5DC; border-left:3px solid var(--cyan); padding:12px 16px; border-radius:4px;">
-      <h4 style="color:var(--cyan); margin-bottom:6px;">Core Concept</h4>
+    <div class="modal-section" style="background:#F9F6F3; border-left:3px solid var(--btn-walnut); padding:12px 16px; border-radius:4px;">
+      <h4 style="color:var(--btn-walnut); margin-bottom:6px;">Core Concept</h4>
       <p style="color:var(--text-main); font-size:0.95rem; line-height:1.5;">${tut.concept}</p>
     </div>
 
@@ -291,7 +291,7 @@ function openTutorial(id) {
 
     <div class="modal-section">
       <h4>Items & Components Checklist</h4>
-      <ul>${itemsList}</ul>
+      <ul style="padding-left:20px; color:var(--text-main);">${itemsList}</ul>
     </div>
 
     <div class="modal-section">
@@ -324,8 +324,8 @@ function openTutorial(id) {
       <p style="color:var(--text-muted); line-height:1.4;">${tut.trouble}</p>
     </div>
 
-    <div class="modal-section" style="border-top:1px solid var(--border); padding-top:15px; text-align:center;">
-      <p style="color:var(--cyan); font-weight:700;">Need a custom setup? DM FOR CUSTOM PROJECTS on Instagram (@byte_builders.official)!</p>
+    <div class="modal-section" style="border-top:1px solid var(--border-subtle); padding-top:15px; text-align:center;">
+      <p style="color:var(--btn-walnut); font-weight:700;">Need a custom setup? DM FOR CUSTOM PROJECTS on Instagram (@byte_builders.official)!</p>
     </div>
   `;
 
