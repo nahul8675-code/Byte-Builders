@@ -39,22 +39,22 @@
   <section id="categories" class="section container">
     <h2 class="section-title">Core <span>Categories</span></h2>
     <div class="category-grid">
-      <div class="cat-card">
+      <div class="cat-card" onclick="filterByCategory('Arduino')">
         <div class="cat-icon">⚡</div>
         <h3>Arduino & Electronics</h3>
         <p>Sensors, breadboard circuits, TFT displays, and step-by-step wiring tables.</p>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" onclick="filterByCategory('Robotics')">
         <div class="cat-icon">🤖</div>
         <h3>Robotics & IoT</h3>
         <p>ESP32 Wi-Fi web servers, smart automation, motors, and connected sensors.</p>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" onclick="filterByCategory('Python')">
         <div class="cat-icon">🐍</div>
         <h3>Python & Coding</h3>
         <p>Python fundamentals, cybersecurity tools, calculators, and beginner scripts.</p>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" onclick="filterByCategory('Cybersecurity')">
         <div class="cat-icon">🛡️</div>
         <h3>Ethical Cybersecurity</h3>
         <p>Linux basics, Rufus Live USB labs, VirtualBox, and defensive security.</p>
@@ -62,221 +62,23 @@
     </div>
   </section>
 
-  <!-- Tutorial Library -->
+  <!-- Tutorial Library with Search & Filters -->
   <section id="tutorials" class="section container">
     <h2 class="section-title">Tutorial <span>Library</span></h2>
     
-    <div class="tutorial-grid">
-
-      <!-- Tutorial 1 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">ARDUINO LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Arduino</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Beginner</span>
-                <span class="time-badge">⏱️ 20 Mins</span>
-              </div>
-            </div>
-            <h3>Arduino Automatic Night Light (LDR)</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> 1x Arduino Uno, 1x LDR, 1x 5mm LED, 1x 10kΩ Resistor...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(1)">Open Detailed Guide</button>
-        </div>
+    <div class="controls-bar">
+      <input type="text" id="searchInput" placeholder="Search projects, sensors, or code...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="All">All (8)</button>
+        <button class="filter-btn" data-category="Arduino">Arduino</button>
+        <button class="filter-btn" data-category="Robotics">Robotics & IoT</button>
+        <button class="filter-btn" data-category="Python">Python</button>
+        <button class="filter-btn" data-category="Cybersecurity">Cybersecurity</button>
       </div>
-
-      <!-- Tutorial 2 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">ROBOTICS LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Robotics</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Beginner</span>
-                <span class="time-badge">⏱️ 15 Mins</span>
-              </div>
-            </div>
-            <h3>Introduction to ESP32: Wi-Fi Scanner</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> 1x ESP32 Board, 1x USB Cable, Arduino IDE...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(2)">Open Detailed Guide</button>
-        </div>
-      </div>
-
-      <!-- Tutorial 3 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">PYTHON LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Python</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Beginner</span>
-                <span class="time-badge">⏱️ 15 Mins</span>
-              </div>
-            </div>
-            <h3>Python Variables & Sensor Data Calculator</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> Windows PC, Python 3.x, VS Code...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(3)">Open Detailed Guide</button>
-        </div>
-      </div>
-
-      <!-- Tutorial 4 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">CYBERSECURITY LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Cybersecurity</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Beginner</span>
-                <span class="time-badge">⏱️ 30 Mins</span>
-              </div>
-            </div>
-            <h3>Starting a Safe Linux Practice Lab (VirtualBox)</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> VirtualBox, Ubuntu ISO Image...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(4)">Open Detailed Guide</button>
-        </div>
-      </div>
-
-      <!-- Tutorial 5 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">ARDUINO LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Arduino</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Intermediate</span>
-                <span class="time-badge">⏱️ 45 Mins</span>
-              </div>
-            </div>
-            <h3>Arduino Ultrasonic Radar with TFT Display</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> 1x Arduino Uno, 1x ST7735 TFT, 1x HC-SR04, 1x SG90 Servo...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(5)">Open Detailed Guide</button>
-        </div>
-      </div>
-
-      <!-- Tutorial 6 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">CYBERSECURITY LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Cybersecurity</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Beginner</span>
-                <span class="time-badge">⏱️ 25 Mins</span>
-              </div>
-            </div>
-            <h3>Bootable Ubuntu Linux USB Lab with Rufus</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> 1x 8GB+ USB Drive, Rufus Tool, Ubuntu ISO...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(6)">Open Detailed Guide</button>
-        </div>
-      </div>
-
-      <!-- Tutorial 7 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">ROBOTICS LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Robotics</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Intermediate</span>
-                <span class="time-badge">⏱️ 30 Mins</span>
-              </div>
-            </div>
-            <h3>ESP32 Smartphone Wi-Fi LED Controller</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> 1x ESP32 Board, 1x LED, Smartphone, Router...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(7)">Open Detailed Guide</button>
-        </div>
-      </div>
-
-      <!-- Tutorial 8 -->
-      <div class="tut-card">
-        <div>
-          <div class="tut-graphic">
-            <div class="chip-illustration">PYTHON LAB</div>
-            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
-          </div>
-          <div class="tut-body">
-            <div class="tut-meta-row">
-              <span class="tut-tag">Python</span>
-              <div class="meta-badges">
-                <span class="difficulty-badge">Beginner</span>
-                <span class="time-badge">⏱️ 20 Mins</span>
-              </div>
-            </div>
-            <h3>Python Password Strength Analyzer</h3>
-            <div class="items-preview">
-              <strong>Items Used:</strong> Windows PC, Python 3.x, VS Code...
-            </div>
-          </div>
-        </div>
-        <div class="tut-footer">
-          <button class="btn-primary" style="width:100%;" onclick="openTutorial(8)">Open Detailed Guide</button>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Cards injected dynamically by script.js -->
+    <div id="tutorialGrid" class="tutorial-grid"></div>
   </section>
 
   <!-- Custom Projects Section -->
@@ -308,7 +110,7 @@
   <section id="about" class="section container">
     <div class="about-box">
       <h2>About <span>Byte-Builders</span></h2>
-      <p>Byte-Builders is an image-first educational project created to make hardware electronics, coding, and cybersecurity clear and practical for students and beginners. Every tutorial includes a visual diagram, a complete list of items used, verified wiring tables, and full copy-paste code.</p>
+      <p>Byte-Builders is an image-first educational project created to make hardware electronics, coding, and cybersecurity clear and practical for students and beginners.</p>
       <div class="ethics-notice">
         <strong>🛡️ Ethical Cybersecurity Rule:</strong> All Linux and cybersecurity tutorials are strictly for educational and defensive purposes. Only test commands on your own computer, VirtualBox labs, or authorized practice platforms.
       </div>
@@ -327,11 +129,11 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p><strong>Byte-Builders</strong> — BUILD. CODE. EXPLORE. | Built with HTML & CSS</p>
+      <p><strong>Byte-Builders</strong> — BUILD. CODE. EXPLORE. | Built with HTML, CSS & JS</p>
     </div>
   </footer>
 
-  <!-- Modal Container -->
+  <!-- Popup Modal -->
   <div id="tutorialModal" class="modal-overlay" style="display:none;">
     <div class="modal-content">
       <button class="modal-close" onclick="closeTutorial()">&times;</button>
@@ -339,87 +141,6 @@
     </div>
   </div>
 
-  <!-- Embedded Popup Script -->
-  <script>
-    const tutorialData = {
-      1: {
-        category: "Arduino", difficulty: "Beginner", time: "20 Mins",
-        title: "Arduino Automatic Night Light (LDR)",
-        concept: "An LDR (Light Dependent Resistor) is a passive sensor whose resistance changes based on surrounding light level. In darkness, resistance rises and shifts voltage across the divider circuit. The Arduino reads this via an analog pin and controls the LED automatically.",
-        diagram: "[5V Pin] ──► [LDR Sensor Leg 1]\n[LDR Leg 2] ──┬──► [Analog Pin A0]\n              └──► [10kΩ Resistor Leg 1]\n[10kΩ Resistor Leg 2] ──► [GND Rail]\n\n[Digital Pin 9] ──► [220Ω Resistor Leg 1]\n[220Ω Resistor Leg 2] ──► [LED Anode (+)]\n[LED Cathode (-)] ──► [GND Rail]",
-        items: ["1x Arduino Uno or Nano", "1x Photoresistor (LDR)", "1x 5mm LED", "1x 10kΩ Resistor", "1x 220Ω Resistor", "1x Breadboard & Wires", "1x USB Cable"],
-        wiring: [
-          ["LDR Sensor", "Leg 1", "5V Power Rail", "Reference voltage input"],
-          ["LDR Sensor", "Leg 2", "Pin A0 & 10kΩ Resistor", "Divider junction"],
-          ["10kΩ Resistor", "Leg 2", "GND Rail", "Ground loop return"],
-          ["220Ω Resistor", "Leg 1", "Digital Pin 9", "Current limiting"],
-          ["5mm LED", "Anode (+)", "220Ω Resistor Leg 2", "Positive terminal"],
-          ["5mm LED", "Cathode (-)", "GND Rail", "Ground return"]
-        ],
-        steps: [
-          "Connect Arduino 5V and GND to breadboard rails.",
-          "Place LDR on breadboard and wire Leg 1 to 5V.",
-          "Connect LDR Leg 2 to Pin A0 and through 10kΩ resistor to GND.",
-          "Connect Pin 9 through 220Ω resistor to LED Anode (+).",
-          "Connect LED Cathode (-) to GND.",
-          "Upload sketch via Arduino IDE."
-        ],
-        code: `const int ldrPin = A0;\nconst int ledPin = 9;\nconst int threshold = 400;\n\nvoid setup() {\n  pinMode(ledPin, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int lightLevel = analogRead(ldrPin);\n  Serial.print("Light Level: ");\n  Serial.println(lightLevel);\n  if (lightLevel < threshold) {\n    digitalWrite(ledPin, HIGH);\n  } else {\n    digitalWrite(ledPin, LOW);\n  }\n  delay(200);\n}`,
-        trouble: "Check LED polarity (longer leg is positive) and open Serial Monitor to adjust the threshold."
-      },
-      2: {
-        category: "Robotics", difficulty: "Beginner", time: "15 Mins",
-        title: "Introduction to ESP32: Wi-Fi Scanner",
-        concept: "The ESP32 microcontroller features built-in Wi-Fi and Bluetooth. Station mode scans surrounding 2.4GHz radio channels and prints network names and signal strengths.",
-        diagram: "[PC USB Port] ══(USB Data Cable)══► [ESP32 Board] )) 2.4GHz Wi-Fi Scan",
-        items: ["1x ESP32 Board", "1x USB Data Cable", "PC with Arduino IDE"],
-        wiring: [
-          ["ESP32 Board", "USB Port", "PC USB Port", "Serial data and power link"],
-          ["Arduino IDE", "Tools > Board", "ESP32 Dev Module", "Target board profile"],
-          ["Arduino IDE", "Tools > Port", "Active COM Port", "Serial communication"]
-        ],
-        steps: [
-          "Install ESP32 board in Arduino IDE Boards Manager.",
-          "Connect ESP32 to PC with a data USB cable.",
-          "Select ESP32 Dev Module and COM port under Tools.",
-          "Paste code and click Upload.",
-          "Hold BOOT button on the ESP32 if connection hangs.",
-          "Open Serial Monitor at 115200 baud."
-        ],
-        code: `#include "WiFi.h"\n\nvoid setup() {\n  Serial.begin(115200);\n  WiFi.mode(WIFI_STA);\n  WiFi.disconnect();\n  delay(100);\n  Serial.println("ESP32 Scanner Initialized!");\n}\n\nvoid loop() {\n  Serial.println("Scanning networks...");\n  int count = WiFi.scanNetworks();\n  for (int i = 0; i < count; ++i) {\n    Serial.print(WiFi.SSID(i));\n    Serial.print(" (RSSI: ");\n    Serial.print(WiFi.RSSI(i));\n    Serial.println(" dBm)");\n  }\n  delay(5000);\n}`,
-        trouble: "Keep the BOOT button held down during code upload if Arduino IDE displays connecting dots."
-      },
-      3: {
-        category: "Python", difficulty: "Beginner", time: "15 Mins",
-        title: "Python Variables & Sensor Data Calculator",
-        concept: "Variables store data values in memory. This script converts raw 10-bit analog readings (0-1023) into real-world 5V voltage readings.",
-        diagram: "[Raw Sensor Reading] ──► [Mathematical Formula] ──► [Calculated Voltage]",
-        items: ["PC / Laptop", "Python 3.x Installed", "VS Code Editor"],
-        wiring: [
-          ["VS Code", "New File", "sensor_calc.py", "Script file target"],
-          ["Terminal", "Command Line", "python sensor_calc.py", "Execution command"]
-        ],
-        steps: [
-          "Create a new file named sensor_calc.py.",
-          "Paste the Python script below.",
-          "Save the file using Ctrl + S.",
-          "Open terminal and execute with python sensor_calc.py."
-        ],
-        code: `project_name = 'ADC Voltage Converter'\nmax_adc = 1023.0\nref_voltage = 5.0\nraw_reading = 512\n\nvoltage = (raw_reading / max_adc) * ref_voltage\n\nprint('=== ' + project_name + ' ===')\nprint('Raw Reading :', raw_reading)\nprint('Voltage Out :', round(voltage, 2), 'V')`,
-        trouble: "Verify that Python is checked in your system PATH variables during installation."
-      },
-      4: {
-        category: "Cybersecurity", difficulty: "Beginner", time: "30 Mins",
-        title: "Starting a Safe Linux Practice Lab (VirtualBox)",
-        concept: "A Virtual Machine runs an isolated guest operating system securely inside your host computer, allowing safe cybersecurity practice.",
-        diagram: "[Host OS] ──► [VirtualBox Hypervisor] ──► [Isolated Ubuntu VM]",
-        items: ["Windows PC", "VirtualBox Software", "Ubuntu Desktop ISO File"],
-        wiring: [
-          ["VirtualBox Profile", "OS Selection", "Ubuntu (64-bit)", "Hypervisor setup profile"],
-          ["RAM Allocation", "Memory Slider", "2048 MB (2 GB+)", "Assigned RAM"],
-          ["Virtual Storage", "VDI Disk", "25 GB Dynamically Allocated", "Virtual hard drive"]
-        ],
-        steps: [
-          "Install VirtualBox and download the Ubuntu ISO file.",
-          "Create a new virtual machine and attach the ISO.",
-          "Allocate 2 GB RAM and 25 GB storage spa
+  <script src="script.js"></script>
+</body>
+</html>
