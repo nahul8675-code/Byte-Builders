@@ -35,26 +35,26 @@
     </div>
   </section>
 
-  <!-- 4 Main Categories -->
+  <!-- Core Categories -->
   <section id="categories" class="section container">
     <h2 class="section-title">Core <span>Categories</span></h2>
     <div class="category-grid">
-      <div class="cat-card" onclick="filterByCategory('Arduino')">
+      <div class="cat-card">
         <div class="cat-icon">⚡</div>
         <h3>Arduino & Electronics</h3>
         <p>Sensors, breadboard circuits, TFT displays, and step-by-step wiring tables.</p>
       </div>
-      <div class="cat-card" onclick="filterByCategory('Robotics')">
+      <div class="cat-card">
         <div class="cat-icon">🤖</div>
         <h3>Robotics & IoT</h3>
         <p>ESP32 Wi-Fi web servers, smart automation, motors, and connected sensors.</p>
       </div>
-      <div class="cat-card" onclick="filterByCategory('Python')">
+      <div class="cat-card">
         <div class="cat-icon">🐍</div>
         <h3>Python & Coding</h3>
         <p>Python fundamentals, cybersecurity tools, calculators, and beginner scripts.</p>
       </div>
-      <div class="cat-card" onclick="filterByCategory('Cybersecurity')">
+      <div class="cat-card">
         <div class="cat-icon">🛡️</div>
         <h3>Ethical Cybersecurity</h3>
         <p>Linux basics, Rufus Live USB labs, VirtualBox, and defensive security.</p>
@@ -62,26 +62,224 @@
     </div>
   </section>
 
-  <!-- Tutorial Library with Search & Filters -->
+  <!-- Tutorial Library -->
   <section id="tutorials" class="section container">
     <h2 class="section-title">Tutorial <span>Library</span></h2>
     
-    <div class="controls-bar">
-      <input type="text" id="searchInput" placeholder="Search projects, sensors, or code (e.g., Radar, ESP32, Password, Rufus)...">
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-category="All">All (8)</button>
-        <button class="filter-btn" data-category="Arduino">Arduino</button>
-        <button class="filter-btn" data-category="Robotics">Robotics & IoT</button>
-        <button class="filter-btn" data-category="Python">Python</button>
-        <button class="filter-btn" data-category="Cybersecurity">Cybersecurity</button>
-      </div>
-    </div>
+    <div class="tutorial-grid">
 
-    <!-- Tutorials Grid (Populated by script.js) -->
-    <div id="tutorialGrid" class="tutorial-grid"></div>
+      <!-- Tutorial 1 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">ARDUINO LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Arduino</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Beginner</span>
+                <span class="time-badge">⏱️ 20 Mins</span>
+              </div>
+            </div>
+            <h3>Arduino Automatic Night Light (LDR)</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> 1x Arduino Uno, 1x LDR, 1x 5mm LED, 1x 10kΩ Resistor...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 2 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">ROBOTICS LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Robotics</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Beginner</span>
+                <span class="time-badge">⏱️ 15 Mins</span>
+              </div>
+            </div>
+            <h3>Introduction to ESP32: Wi-Fi Scanner</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> 1x ESP32 Board, 1x USB Cable, Arduino IDE...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 3 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">PYTHON LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Python</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Beginner</span>
+                <span class="time-badge">⏱️ 15 Mins</span>
+              </div>
+            </div>
+            <h3>Python Variables & Sensor Data Calculator</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> Windows PC, Python 3.x, VS Code...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 4 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">CYBERSECURITY LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Cybersecurity</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Beginner</span>
+                <span class="time-badge">⏱️ 30 Mins</span>
+              </div>
+            </div>
+            <h3>Starting a Safe Linux Practice Lab (VirtualBox)</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> VirtualBox, Ubuntu ISO Image...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 5 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">ARDUINO LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Arduino</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Intermediate</span>
+                <span class="time-badge">⏱️ 45 Mins</span>
+              </div>
+            </div>
+            <h3>Arduino Ultrasonic Radar with TFT Display</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> 1x Arduino Uno, 1x ST7735 TFT, 1x HC-SR04, 1x SG90 Servo...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 6 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">CYBERSECURITY LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Cybersecurity</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Beginner</span>
+                <span class="time-badge">⏱️ 25 Mins</span>
+              </div>
+            </div>
+            <h3>Bootable Ubuntu Linux USB Lab with Rufus</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> 1x 8GB+ USB Drive, Rufus Tool, Ubuntu ISO...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 7 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">ROBOTICS LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Robotics</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Intermediate</span>
+                <span class="time-badge">⏱️ 30 Mins</span>
+              </div>
+            </div>
+            <h3>ESP32 Smartphone Wi-Fi LED Controller</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> 1x ESP32 Board, 1x LED, Smartphone, Router...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+      <!-- Tutorial 8 -->
+      <div class="tut-card">
+        <div>
+          <div class="tut-graphic">
+            <div class="chip-illustration">PYTHON LAB</div>
+            <small style="color:var(--text-muted); font-family:monospace;">Step-by-Step Lab</small>
+          </div>
+          <div class="tut-body">
+            <div class="tut-meta-row">
+              <span class="tut-tag">Python</span>
+              <div class="meta-badges">
+                <span class="difficulty-badge">Beginner</span>
+                <span class="time-badge">⏱️ 20 Mins</span>
+              </div>
+            </div>
+            <h3>Python Password Strength Analyzer</h3>
+            <div class="items-preview">
+              <strong>Items Used:</strong> Windows PC, Python 3.x, VS Code...
+            </div>
+          </div>
+        </div>
+        <div class="tut-footer">
+          <a href="#custom-projects" class="btn-primary" style="width:100%; text-align:center;">Open Detailed Guide</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <!-- Custom Project Request Section -->
+  <!-- Custom Projects Section -->
   <section id="custom-projects" class="section container">
     <h2 class="section-title">Need a <span>Custom Project?</span></h2>
     <div class="custom-grid">
@@ -102,11 +300,11 @@
       </div>
     </div>
     <div style="text-align: center; margin-top: 25px;">
-      <a href="#instagram" class="btn-primary">DM FOR CUSTOM PROJECTS ON INSTAGRAM</a>
+      <a href="https://instagram.com/byte_builders.official" target="_blank" class="btn-primary">DM FOR CUSTOM PROJECTS ON INSTAGRAM</a>
     </div>
   </section>
 
-  <!-- About & Ethical Notice -->
+  <!-- About Section -->
   <section id="about" class="section container">
     <div class="about-box">
       <h2>About <span>Byte-Builders</span></h2>
@@ -122,25 +320,16 @@
     <div class="insta-banner">
       <h2>Follow Our Bite-Sized Carousels on <span>Instagram</span></h2>
       <p>Check out quick circuit diagrams, code snippets, or <strong>DM FOR CUSTOM PROJECTS</strong>!</p>
-      <a href="https://instagram.com/byte_builders.official" target="_blank" id="instaLink" class="btn-primary">Follow @byte_builders.official on Instagram</a>
+      <a href="https://instagram.com/byte_builders.official" target="_blank" class="btn-primary">Follow @byte_builders.official on Instagram</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p><strong>Byte-Builders</strong> — BUILD. CODE. EXPLORE. | Built with HTML, CSS & JS</p>
+      <p><strong>Byte-Builders</strong> — BUILD. CODE. EXPLORE. | Built with HTML & CSS</p>
     </div>
   </footer>
 
-  <!-- Tutorial Modal Popup -->
-  <div id="tutorialModal" class="modal-overlay" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModalBtn">&times;</button>
-      <div id="modalBody"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
